@@ -5,7 +5,10 @@ function adicionar() {
     li.innerText = produto;
 
     li.onclick = function() {
-        li.remove();
+        let novo = prompt("Editar produto:", li.innerText);
+        if (novo) {
+            li.innerText = novo;
+        }
     };
 
     document.getElementById("lista").appendChild(li);
